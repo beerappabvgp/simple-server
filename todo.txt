@@ -1,0 +1,8 @@
+1. what is a database 
+2. what is mongoDb 
+3. what is an ODM 
+4. what is mongoose 
+5. we need to get the connection string to the db 
+6. we need to connect to the database
+7. what is schema and model?
+8. let us try to store some data 
