@@ -1,8 +1,9 @@
-1. what is a database 
-2. what is mongoDb 
-3. what is an ODM 
-4. what is mongoose 
-5. we need to get the connection string to the db 
-6. we need to connect to the database
-7. what is schema and model?
-8. let us try to store some data 
+1. Recap yesterdays session
+
+
+1. I wanted to put some data in the database
+
+
+2. I wanted a way to communicate with the machine
+3. You need to send the data to the DB 
+4. DB storing the data
