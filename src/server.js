@@ -1,10 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
+import userRouter from "./routes/userRoutes.js";
 
 const app = express();
+// It parses the request body and gives you access to client data at req.body
 app.use(express.json());
 const port = 5000;
-import userRouter from "./routes/userRoutes.js";
 
 const mongo_url = "mongodb+srv://beerappabharathb:Ij3kwygvXY9TDtxO@cluster0.qs3tg.mongodb.net/user-management?retryWrites=true&w=majority&appName=Cluster0";
 
