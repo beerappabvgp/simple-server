@@ -19,7 +19,7 @@ connectToDB();
 
 
 app.get("/videos", (req, res) => {
-    console.log("executed .... ");
+    console.log("executed .... ");  
     res.send(["video1","video2","video3"]);
 });
 
