@@ -166,7 +166,9 @@ export const signin = async (req, res) => {
     const { password: userPassword, ...rest } = user._doc;
     // create a new JWT
     console.log("user is: ", user);
-    const token = jsonwebtoken.sign({ id: user._id } , process.env.JWT_SECRET, { expiresIn: "1h" });
+    
+    const token = jsonwebtoken.sign({ id: user._id } , process.env.JWT_SECRET, { expiresIn: "100ms" });
+
     console.log("token is: ", token);
     if (isMatch) {
       return res.status(200).json({

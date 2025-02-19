@@ -12,10 +12,23 @@ export const userMiddleware = async (req, res, next) => {
         }
          
         const decoded = jsonwebtoken.verify(token, process.env.JWT_SECRET);
-        // need to check the expiry of the token 
-        
 
+        console.log("decoded: ", decoded);
+        const { id, exp } = decoded;
+        // check the expiry of the token
+        let currentTime = new Date().getTime();
+        currentTime = currentTime / 1000;
+        if (exp < currentTime) {
+            return res.status(400).json({
+                msg: "Token expired ...."
+            });
+        } 
+        req.user = id;
+        next();
     } catch (error) {
         console.log(error);
+        return res.status(400).json({
+            msg: "Some issue with the token ....",
+        });
     }
 };
